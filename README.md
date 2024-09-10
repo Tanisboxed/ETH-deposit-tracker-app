@@ -1,6 +1,6 @@
 # ETH-deposit-tracker-app
 
-Ethereum Deposit Tracker is a tool designed to track deposists to Ethereum 2.0 Breacon Chain's deposit contract. It leverages Web3.py to connect to an Ethereum node via WebSocket, monitor new deposit events and save them to a PostgreSQL database for further analysis and reporting.
+Ethereum Deposit Tracker is a tool designed to track deposists to Ethereum 2.0 Breacon Chain's deposit contract. It leverages Web3.py to connect to an Ethereum node via WebSocket, monitor new deposit events and save them to a PostgreSQL database for further analysis and reporting. Utilizing geth.
 
 ## Table of Contents
 - Project Structure
