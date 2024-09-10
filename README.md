@@ -76,7 +76,7 @@ EthereumDepositTracker/
    POSTGRES_PASSWORD=your_password
    TELEGRAM_BOT_TOKEN=7519483853:AAFQKVvOg6UhzOuLcdyzkLqqrH8si8XkBJ
 
-### Telegram BOT 
+### Telegram BOT TOKEN AQUIRED:
 ![image](https://github.com/user-attachments/assets/d43d31be-bb8c-4f51-81df-e42fbd23a093)
 
 ### Usage:
