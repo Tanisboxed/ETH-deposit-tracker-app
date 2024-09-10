@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  ethereum-node:
+    image: ethereum/client-go:stable
+    container_name: ethereum-node
+    command: ["--dev", "--http", "--http.addr", "0.0.0.0", "--http.port", "8545", "--http.api", "eth,net,web3"]
+    ports:
+      - "8545:8545"
+    volumes:
+      - ethereum-data:/root/.ethereum
+
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    environment:
+      POSTGRES_USER: tanisha
+      POSTGRES_PASSWORD: tanu2004
+      POSTGRES_DB: ethereumdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: ethereum-deposit-tracker
+    environment:
+      - DATABASE_URL=postgresql://tanisha:tanu2004@postgres:5432/ethereumdb
+      - GETH_WS_URL=ws://ethereum-node:8545
+    depends_on:
+      - ethereum-node
+      - postgres
+    volumes:
+      - ./C:/Users/Tanisha Jauhari/OneDrive/Desktop/EthereumDepositTracker:/app
+    ports:
+      - "80:80"
+
+#  grafana:
+#    image: grafana/grafana:latest
+#    volumes:
+#      - ./grafana/data:/var/lib/grafana
+#      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
+#    environment:
+#      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
+#    ports:
+#      - "3000:3000"
+#    depends_on:
+#      - postgres
+
+#  alert-server:
+#    build:
+#      context: ..
+#      dockerfile: docker/Dockerfile
+#    command: python src/alert_server.py
+#    environment:
+#      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+#      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+#    ports:
+#      - "5000:5000"'''
+
+volumes:
+  ethereum-data:
+  postgres-data:
