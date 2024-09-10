@@ -14,36 +14,47 @@ Ethereum Deposit Tracker is a tool designed to track deposists to Ethereum 2.0 B
 - Contributing
 - License
 
-###Project Structure
+### Project Structure
 
 EthereumDepositTracker/
 │
 ├── src/
+
 │   └── ethereum_deposit_tracker.py    # Main Ethereum Deposit Tracker code
+
 ├── tests/
+
 │   └── test_edt.py # Unit tests
+
 ├── docker/
+
 │   ├── Dockerfile                     # Docker build instructions
+
 │   └── docker-compose.yml              # Docker Compose for multi-container setup
+
 ├── geth-data/                         # Folder to store Ethereum node data (for Docker)
+
 ├── .env                               # Environment variables
+
 ├── requirements.txt                    # Python dependencies
+
 ├── README.md                          # Project documentation
+
 ├── .gitignore                          # Ignored files in Git
 
 
-###Features:
+### Features:
 - Tracks deposits made to the Ethereum 2.0 Beacon Deposit contract.
 - Saves deposit information (pubkey, fee, etc.) to a PostgreSQL database.
 - Runs in a Dockerized environment with an Ethereum Geth node.
 
-###Prerequisites:
+### Prerequisites:
 - Python 3.9+
 - PostgreSQL
 - Docker and Docker Compose
 - Web3.py and associated dependencies
 
-###Setup:
+### Setup:
 1. Clone the repo:
   git clone https://github.com/Tanisboxed/ETH-deposit-tracker-app.git
   cd EthereumDepositTracker
@@ -65,12 +76,12 @@ EthereumDepositTracker/
    POSTGRES_PASSWORD=your_password
    TELEGRAM_BOT_TOKEN=7519483853:AAFQKVvOg6UhzOuLcdyzkLqqrH8si8XkBJ
 
-###Usage:
+### Usage:
 1. Running the Ethereum Deposit Tracker: pythono src/ethereum_deposit_tracker.py
 2. Build and start the Docket container: docker-compose up --build
 3. Running Tests: unittest tests/test_edt.py
 
-###Troubleshooting
+### Troubleshooting
 1. WebSocket URL Issue: Ensure WebSocket URL (GETH_WS_URL) is correct.
 2. PostgreSQL Connection: Verify your PostgreSQL credentials and that the database is running
 
