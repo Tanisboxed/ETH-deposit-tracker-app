@@ -18,16 +18,27 @@ Ethereum Deposit Tracker is a tool designed to track deposists to Ethereum 2.0 B
 EthereumDepositTracker/
 │
 ├── src/
+
 │   └── ethereum_deposit_tracker.py    # Main Ethereum Deposit Tracker code
+
 ├── tests/
+
 │   └── test_edt.py # Unit tests
+
 ├── docker/
+
 │   ├── Dockerfile                     # Docker build instructions
+
 │   └── docker-compose.yml              # Docker Compose for multi-container setup
+
 ├── geth-data/                         # Folder to store Ethereum node data (for Docker)
+
 ├── .env                               # Environment variables
+
 ├── requirements.txt                    # Python dependencies
+
 ├── README.md                          # Project documentation
+
 ├── .gitignore                          # Ignored files in Git
 
 
