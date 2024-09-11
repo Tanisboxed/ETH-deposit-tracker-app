@@ -58,12 +58,14 @@ EthereumDepositTracker/
 1. Clone the repo:
 ```
 git clone https://github.com/Tanisboxed/ETH-deposit-tracker-app.git
-cd EthereumDepositTracker```
+cd EthereumDepositTracker
+```
 
 3. Create virtual environment:
 ```
 python3 -m venv venv
-source venv/bin/activate```
+source venv/bin/activate
+```
 
 4. Install dependences:
 ```pip install -r requirement.txt```
