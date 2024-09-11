@@ -60,18 +60,18 @@ git clone https://github.com/Tanisboxed/ETH-deposit-tracker-app.git
 cd EthereumDepositTracker
 ```
 
-3. Create virtual environment:
+2. Create virtual environment:
 ```
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-4. Install dependences:
+3. Install dependences:
 ```
 pip install -r requirement.txt
 ```
 
-5. Configure environment variables:
+4. Configure environment variables:
    configure the following environment variables:
 ```
 GETH_WS_URL=ws://localhost:8546
