@@ -1,5 +1,4 @@
 # ETH-deposit-tracker-app
-
 Ethereum Deposit Tracker is a tool designed to track deposists to Ethereum 2.0 Breacon Chain's deposit contract. It leverages Web3.py to connect to an Ethereum node via WebSocket, monitor new deposit events and save them to a PostgreSQL database for further analysis and reporting. Utilizing geth.
 
 ## Table of Contents
@@ -19,27 +18,16 @@ Ethereum Deposit Tracker is a tool designed to track deposists to Ethereum 2.0 B
 EthereumDepositTracker/
 │
 ├── src/
-
 │   └── ethereum_deposit_tracker.py    # Main Ethereum Deposit Tracker code
-
 ├── tests/
-
 │   └── test_edt.py # Unit tests
-
 ├── docker/
-
 │   ├── Dockerfile                     # Docker build instructions
-
 │   └── docker-compose.yml              # Docker Compose for multi-container setup
-
 ├── geth-data/                         # Folder to store Ethereum node data (for Docker)
-
 ├── .env                               # Environment variables
-
 ├── requirements.txt                    # Python dependencies
-
 ├── README.md                          # Project documentation
-
 ├── .gitignore                          # Ignored files in Git
 
 
@@ -68,10 +56,13 @@ source venv/bin/activate
 ```
 
 4. Install dependences:
-```pip install -r requirement.txt```
+```
+pip install -r requirement.txt
+```
 
 5. Configure environment variables:
    configure the following environment variables:
+```
    GETH_WS_URL=ws://localhost:8546
    POSTGRES_HOST=localhost
    POSTGRES_PORT=5432
@@ -79,7 +70,7 @@ source venv/bin/activate
    POSTGRES_USER=your_username
    POSTGRES_PASSWORD=your_password
    TELEGRAM_BOT_TOKEN=7519483853:AAFQKVvOg6UhzOuLcdyzkLqqrH8si8XkBJ
-
+```
 
 #### PostGREsql Structure: 
 ![image](https://github.com/user-attachments/assets/71eede92-62f2-4bbf-95c0-76916d230b1b)
