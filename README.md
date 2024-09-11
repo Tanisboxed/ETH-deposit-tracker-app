@@ -74,13 +74,13 @@ pip install -r requirement.txt
 5. Configure environment variables:
    configure the following environment variables:
 ```
-   GETH_WS_URL=ws://localhost:8546
-   POSTGRES_HOST=localhost
-   POSTGRES_PORT=5432
-   POSTGRES_DB=eth_deposits
-   POSTGRES_USER=your_username
-   POSTGRES_PASSWORD=your_password
-   TELEGRAM_BOT_TOKEN=7519483853:AAFQKVvOg6UhzOuLcdyzkLqqrH8si8XkBJ
+GETH_WS_URL=ws://localhost:8546
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=eth_deposits
+POSTGRES_USER=your_username
+POSTGRES_PASSWORD=your_password
+TELEGRAM_BOT_TOKEN=7519483853:AAFQKVvOg6UhzOuLcdyzkLqqrH8si8XkBJ
 ```
 
 #### PostGREsql Structure: 
